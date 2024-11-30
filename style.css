@@ -50,12 +50,12 @@ nav .nav-links{
     gap: 16px;
 }
 
-nav .nav-links a{
+.nav-item a{
     transition: color 0.3s ease;
 }
 
-nav .nav-links a:hover,
-nav .nav-links a.selected{
+nav .nav-links .nav-item a:hover,
+nav .nav-links .nav-item .selected{
     color: #303f9f;
 }
 
@@ -76,7 +76,8 @@ nav .nav-links a.selected{
   display: block;
 }
 
-.nav-item .selected {
+.nav-item .selected:active,
+.nav-item .selected:focus {
     color: #303f9f;
 }
 
