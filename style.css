@@ -50,13 +50,50 @@ nav .nav-links{
     gap: 16px;
 }
 
-nav .nav-links a{
+.nav-item a{
     transition: color 0.3s ease;
 }
 
-nav .nav-links a:hover,
-nav .nav-links a.selected{
+nav .nav-links .nav-item a:hover,
+nav .nav-links .nav-item .selected{
     color: #303f9f;
+}
+
+.nav-item {
+    position: relative;
+}
+  
+.nav-item .submenu {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.nav-item:hover .submenu {
+  display: block;
+}
+
+.nav-item .selected:active,
+.nav-item .selected:focus {
+    color: #303f9f;
+}
+
+.nav-item .submenu li {
+    list-style-type: none;
+}
+  
+.nav-item .submenu li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-item .submenu li a:hover {
+  background-color: #f1f1f1;
 }
 
 .main {
@@ -605,7 +642,8 @@ footer p{
     margin-left: auto;       
     margin-right: auto;     
     margin-top: 20px;       
-    max-width: 100%;        
+    max-width: 350px;
+    max-height: 250px;        
     height: auto;           
     border-radius: 10px;    
 }
